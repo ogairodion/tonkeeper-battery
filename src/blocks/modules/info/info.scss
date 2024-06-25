@@ -1,5 +1,5 @@
 .info {
-    padding: rem(50) 0 rem(50);
+    padding: rem(100) 0;
     
     &__title {
         margin-bottom: rem(138);
@@ -26,5 +26,10 @@
 
     &__img {
         min-width: rem(439);
+    }
+
+    .blur-item {
+        top: rem(449);
+        left: rem(-500);
     }
 }

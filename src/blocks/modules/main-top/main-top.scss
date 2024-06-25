@@ -47,4 +47,16 @@
             object-fit: cover;
         }
     }
+
+    .blur-item {
+        &:first-child {
+            top: rem(-383);
+            right: rem(-497);
+        }
+
+        &:nth-child(2) {
+            top: rem(147);
+            left: rem(-709);
+        }
+    }
 }

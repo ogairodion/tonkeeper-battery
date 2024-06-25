@@ -1,0 +1,27 @@
+.footer {
+    background: var(--color-gray-dark);
+    padding: rem(23) 0;
+    margin-top: rem(102);
+
+    &__logo {
+        font-size: rem(60);
+        border-radius: rem(15);
+        background: var(--color-bg);
+        padding: rem(10);
+    }
+
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__text {
+        font-size: rem(18);
+        line-height: rem(22);
+
+        span {
+            font-weight: 900;
+        }
+    }
+}
