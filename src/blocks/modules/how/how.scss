@@ -1,0 +1,47 @@
+.how {
+    padding: rem(50) 0 rem(50);
+
+    &__title {
+        margin-bottom: rem(120);
+    }
+
+    &__item {
+        display: flex;
+        gap: rem(32);
+        font-size: rem(30);
+        line-height: rem(50);
+        border-radius: rem(30);
+        background: linear-gradient(127deg, rgba(0,0,0,0.4990371148459384) 50%, rgba(0,148,255,1) 125%);
+        padding: rem(44);
+
+        &:not(:last-child) {
+            margin-bottom: rem(100);
+        }
+
+        &:nth-child(2n) {
+            flex-direction: row-reverse;
+            background: linear-gradient(-127deg, rgba(0,0,0,0.4990371148459384) 50%, rgba(0,148,255,1) 125%);
+        }
+
+        &-text {
+            width: 50%;
+        }
+
+        &-img {
+            position: relative;
+            width: 50%;
+            min-height: rem(453);
+            overflow: hidden;
+            border-radius: rem(30);
+
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}
