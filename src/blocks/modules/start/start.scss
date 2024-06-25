@@ -1,0 +1,60 @@
+.start {
+    padding: rem(50) 0 rem(50);
+
+    &__title {
+        margin-bottom: rem(120);
+    }
+
+    &__slide {
+        position: relative;
+        width: 100% !important;
+        min-height: rem(551);
+        border-radius: rem(30);
+        overflow: hidden;
+        background: linear-gradient(127deg, rgba(0,0,0,0.4990371148459384) 50%, rgba(0,148,255,1) 125%);
+        padding: rem(44);
+
+        &-title {
+            max-width: rem(714);
+            font-size: rem(46);
+            font-weight: 600;
+            line-height: rem(56);
+            margin-bottom: rem(95);
+        }
+
+        &-icon {
+            font-size: rem(146);
+        }
+
+        &-number {
+            position: absolute;
+            z-index: 2;
+            right: 0;
+            bottom: rem(-56);
+            font-size: rem(350);
+            line-height: rem(300);
+            font-weight: 900;
+            color: var(--color-blue-2);
+            opacity: 0.2;
+        }
+
+        &-img {
+            position: absolute;
+            top: 0;
+            right: rem(-10);
+            z-index: 1;
+        }
+    }
+
+    .swiper-slide {
+        opacity: 0 !important;
+        
+        &-active {
+            opacity: 1 !important;
+        }
+    }
+
+    .swiper-pagination {
+        margin-top: rem(45);
+    }
+}

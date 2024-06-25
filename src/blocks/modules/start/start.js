@@ -1,13 +1,15 @@
-modules.define('start', ['i-bem-dom'], function(provide, bemDom) {
+import Swiper from 'swiper';
+import { Pagination, EffectFade } from 'swiper/modules';
 
-provide(bemDom.declBlock(this.name, {
-    onSetMod: {
-        js: {
-            inited: function() {
-                
-            }
-        }
-    }
-}));
-
+const startSlider = new Swiper('.start__slider', {
+    modules: [EffectFade, Pagination],
+    effect: 'fade',
+    slidesPerView: 1,
+    resistance: 0,
+    resistanceRation: false,
+    speed: 800,
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
 });

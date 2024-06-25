@@ -1,0 +1,24 @@
+section.start
+    h2.start__title.title--h2 Начните пользоваться батарейкой
+    .start__slider.swiper 
+        .swiper-wrapper
+            .start__slide.swiper-slide
+                .start__slide-title Обновите Тонкипер на iOS и Android до версии 4.3
+                .start__slide-icon
+                    +svgColor('logo')
+                .start__slide-number 01
+            .start__slide.swiper-slide
+                .start__slide-title Затем пополните батарейку в Настройках → Батарейка
+                .start__slide-icon
+                    +svgColor('logo')
+                .start__slide-number 02
+                .start__slide-img
+                    +webp(['start/1', 'jpg'])
+            .start__slide.swiper-slide
+                .start__slide-title После зарядки статус батарейки появится на главном экране
+                .start__slide-icon
+                    +svgColor('logo')
+                .start__slide-number 03
+                .start__slide-img
+                    +webp(['start/2', 'jpg'])
+    .swiper-pagination

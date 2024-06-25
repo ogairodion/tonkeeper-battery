@@ -28,6 +28,7 @@ body {
     color: var(--color-white);
     background: var(--color-bg);
     margin: 0 auto;
+    overflow-x: clip;
 
     &.on-scroll {
         margin-top: 76px;
@@ -36,25 +37,37 @@ body {
 
 .main {
     position: relative;
-    flex: 1;
     z-index: z("l-default");
-    display: flex;
-    flex-direction: column;
-    padding-bottom: 171px;
 
     &-content {
         position: relative;
         display: grid;
         grid-template-columns: 1fr rem(150);
         gap: rem(40);
-        align-items: flex-start;
-        overflow-y: auto;
-    }
+        align-items: end;
+        width: 100%;
 
-    &-right {
-        position: sticky;
-        right: 0;
-        bottom: 0;
+        &-right {
+            position: sticky;
+            position: -webkit-sticky;
+            right: 0;
+            bottom: rem(20);
+        }
+    }
+}
+
+.swiper-pagination {
+    position: static;
+
+    &-bullet {
+        opacity: 1 !important;
+        width: rem(20);
+        height: rem(20);
+        background: var(--color-gray);
+
+        &-active {
+            background: var(--color-blue);
+        }
     }
 }
 

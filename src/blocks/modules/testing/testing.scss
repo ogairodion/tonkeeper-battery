@@ -1,0 +1,44 @@
+.testing {
+    padding: rem(50) 0 rem(50);
+
+    &__title {
+        margin-bottom: rem(100);
+    }
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        max-width: rem(1150);
+        font-size: rem(46);
+        line-height: rem(56);
+        font-weight: 900;
+        margin-bottom: rem(44);
+
+        &:after {
+            content: '';
+            width: 100%;
+            max-width: rem(803);
+            height: rem(1);
+            background: var(--color-blue);
+            margin-top: rem(30);
+        }
+
+        a {
+            text-decoration: underline;
+            color: var(--color-blue);
+        }
+    }
+
+    &__icons {
+        display: flex;
+        align-items: center;
+        gap: rem(22);
+    }
+
+    &__icon {
+        svg {
+            max-width: rem(100);
+            height: auto;
+        }
+    }
+}

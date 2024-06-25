@@ -25,6 +25,11 @@
 
         &-text {
             width: 50%;
+
+            a {
+                text-decoration: underline;
+                color: var(--color-blue);
+            }
         }
 
         &-img {
