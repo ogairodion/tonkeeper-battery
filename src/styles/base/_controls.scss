@@ -3,5 +3,13 @@
         font-size: rem(150);
         font-weight: 900;
         line-height: rem(185);
+        color: var(--color-blue);
+    }
+
+    &--h2 {
+        font-size: rem(64);
+        line-height: rem(78);
+        font-weight: 900;
+        color: var(--color-blue);
     }
 }

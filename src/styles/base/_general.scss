@@ -41,6 +41,21 @@ body {
     display: flex;
     flex-direction: column;
     padding-bottom: 171px;
+
+    &-content {
+        position: relative;
+        display: grid;
+        grid-template-columns: 1fr rem(150);
+        gap: rem(40);
+        align-items: flex-start;
+        overflow-y: auto;
+    }
+
+    &-right {
+        position: sticky;
+        right: 0;
+        bottom: 0;
+    }
 }
 
 .lazy, .swiper-lazy  {
