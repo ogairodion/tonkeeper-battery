@@ -1,0 +1,163 @@
+*{
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+input,button,textarea{
+    -webkit-appearance: none;
+}
+
+html, body {
+    min-width: 320px;
+    overflow-x: clip;
+}
+
+body {
+    position: relative;
+    font-family: $primary_font;
+    font-style: normal;
+    letter-spacing: normal;
+    font-size: 16px;
+    line-height: 120%;
+    max-width: 1440px;
+    min-width: 320px;
+    height: 100%;
+    min-height: 100vh;
+    margin: 0 auto;
+
+    &.on-scroll {
+        margin-top: 76px;
+    }
+}
+
+.main {
+    position: relative;
+    flex: 1;
+    z-index: z("l-default");
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 171px;
+}
+
+.lazy, .swiper-lazy  {
+    opacity: 0;
+}
+
+.loading,
+.loaded,
+[data-was-processed="true"],
+[data-ll-status="entered"],
+.swiper-lazy-loaded {
+    @include tr(all);
+    opacity: 1;
+}
+
+.hidden {
+    display: none !important;
+    opacity: 0 !important;
+}
+
+.show,
+.show_btn {
+    display: flex !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+    font-weight: 500;
+}
+
+textarea,
+a,
+button,
+input[type="submit"] {
+    @include tr(all);
+    text-decoration: none;
+    color: inherit;
+    outline: none;
+}
+
+a,
+button,
+input[type="submit"] {
+    cursor: pointer;
+}
+
+input[type="submit"]:disabled {
+    opacity: .5;
+    cursor: not-allowed;
+}
+
+button {
+    background: none;
+    border: none;
+}
+
+input,
+video {
+    outline: none;
+    border: none;
+}
+
+.fancybox-content{
+    padding: 0;
+}
+
+input, textarea {
+    &::placeholder {
+        @include tr("all");
+    }
+    &:focus {
+        &::placeholder {
+            opacity: 0 !important;
+        } 
+    }
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+.l {
+    &-default {
+        position: relative;
+        z-index: z("l-default");
+        width: 100%;
+        margin: 0 auto;
+        box-sizing: border-box;
+        padding: 0 44px; 
+    }
+}
+
+input, textarea {
+    border: none;
+}
+
+.fancybox-content {
+    background: none;
+    z-index: 99994;
+}
+
+.compensate-for-scrollbar {
+    margin-right: auto !important;
+}
+
+.overflow-y-hidden {
+    overflow-y: hidden !important;
+}
+
+@keyframes show {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

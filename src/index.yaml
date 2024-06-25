@@ -1,0 +1,21 @@
+ProjectTitle: ProjectName
+
+PageList:
+  - file: homepage.html
+    ready: 100
+  - file: about.html
+    ready: 100
+  - file: case.html
+    ready: 100
+  - file: cases.html
+    ready: 100
+  - file: 403.html
+    ready: 100
+  - file: 404.html
+    ready: 100
+  - file: 500.html
+    ready: 100
+  - file: policy.html
+    ready: 100
+  - file: contacts.html
+    ready: 100
