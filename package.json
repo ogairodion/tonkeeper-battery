@@ -82,10 +82,9 @@
     "yargs": "^17.0.1"
   },
   "dependencies": {
-    "@fancyapps/fancybox": "^3.5.7",
+    "bem-tools-core": "^0.0.3",
     "bem-tools-create": "^2.3.0",
     "gsap": "^3.12.2",
-    "imagesloaded": "^5.0.0",
     "jquery": "^3.7.0",
     "require-yaml": "^0.0.1",
     "script-loader": "^0.7.2",

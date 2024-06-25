@@ -22,10 +22,11 @@ body {
     letter-spacing: normal;
     font-size: 16px;
     line-height: 120%;
-    max-width: 1440px;
     min-width: 320px;
     height: 100%;
     min-height: 100vh;
+    color: var(--color-white);
+    background: var(--color-bg);
     margin: 0 auto;
 
     &.on-scroll {

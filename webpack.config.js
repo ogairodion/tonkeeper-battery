@@ -19,12 +19,6 @@ module.exports = {
     },
     entry: {
         main: "./src/js/index.js",
-        main_page: "./src/js/main-page.js",
-        about: "./src/js/about.js",
-        cases: "./src/js/cases.js",
-        contacts: "./src/js/contacts.js",
-        main_page_bg: "./src/js/main-page-bg.js",
-        main_page_text: "./src/js/main-page-text.js",
     },
 
     output: {

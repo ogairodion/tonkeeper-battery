@@ -1,0 +1,36 @@
+.header {
+    position: absolute;
+    width: 100%;
+    z-index: z('header');
+    padding: rem(9) 0;
+
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    &__menu {
+        display: flex;
+        align-items: center;
+        gap: rem(42);
+
+        &-item {
+            font-size: rem(22);
+            line-height: rem(27);
+            transition: color 0.4s ease;
+
+            &:hover {
+                color: var(--color-blue);
+            }
+        }
+    }
+
+    &__logo {
+        font-size: rem(60);
+        border-radius: rem(15);
+        background: var(--color-bg);
+        padding: rem(10);
+    }
+}

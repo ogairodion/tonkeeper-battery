@@ -1,0 +1,51 @@
+.main-top {
+    padding: rem(142) 0 rem(44);
+    margin-bottom: rem(170);
+
+    &__title {
+        text-align: center;
+        color: var(--color-blue);
+        margin-bottom: rem(78);
+    }
+
+    &__wrapper {
+        position: relative;
+        display: flex;
+        align-items: flex-start;
+        min-height: rem(700);
+        background: linear-gradient(127deg, rgba(0,0,0,0.4990371148459384) 50%, rgba(0,148,255,1) 100%);
+        border-radius: rem(30);
+        overflow: hidden;
+        padding: rem(44);
+    }
+
+    &__info {
+        z-index: 1; 
+        max-width: rem(761);
+
+        &-text {
+            max-width: rem(746);
+            font-size: rem(38);
+            line-height: rem(64);
+            margin-bottom: rem(169);
+        }
+
+        &-downloads {
+            display: flex;
+            align-items: center;
+            gap: rem(38);
+        }
+    }
+
+    &__img {
+        position: absolute;
+        top: rem(-154);
+        right: 0;
+        width: rem(800);
+        height: rem(1530);
+
+        img {
+            object-fit: cover;
+        }
+    }
+}
