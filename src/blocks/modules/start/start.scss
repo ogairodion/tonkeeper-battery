@@ -1,8 +1,14 @@
 .start {
+    position: relative;
     padding: rem(100) 0;
 
     &__title {
         margin-bottom: rem(120);
+    }
+
+    .blur-item {
+        top: rem(-387);
+        right: rem(-541);
     }
 
     &__slide {

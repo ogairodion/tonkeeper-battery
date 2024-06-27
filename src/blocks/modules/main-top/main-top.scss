@@ -10,38 +10,57 @@
     &__wrapper {
         position: relative;
         display: flex;
-        align-items: flex-start;
-        min-height: rem(700);
+        flex-direction: column;
+        min-height: rem(500);
         background: linear-gradient(127deg, rgba(0,0,0,0.4990371148459384) 50%, rgba(0,148,255,1) 125%);
         border-radius: rem(30);
         overflow: hidden;
+        margin: 0 auto;
         padding: rem(44);
     }
 
     &__info {
         z-index: 1; 
+        display: flex;
+        flex-direction: column;
+        flex: 1 1 auto;
         max-width: rem(761);
 
         &-text {
             max-width: rem(746);
-            font-size: rem(38);
-            line-height: rem(64);
-            margin-bottom: rem(169);
+            font-size: rem(32);
+            line-height: rem(48);
+            margin-bottom: rem(100);
         }
 
         &-downloads {
             display: flex;
             align-items: center;
-            gap: rem(38);
+            gap: rem(16);
+            margin-top: auto;
+        }
+
+        &-download {
+            img {
+                width: auto;
+                height: rem(74);
+                transition: transform 0.4s ease;
+            }
+
+            &:hover {
+                img {
+                    transform: scale(1.05);
+                }
+            }
         }
     }
 
     &__img {
         position: absolute;
-        top: rem(-154);
+        top: rem(-130);
         right: 0;
-        width: rem(800);
-        height: rem(1530);
+        width: rem(600);
+        height: rem(1230);
 
         img {
             object-fit: cover;
@@ -57,6 +76,39 @@
         &:nth-child(2) {
             top: rem(147);
             left: rem(-709);
+        }
+    }
+
+    .js-main-animation {
+        opacity: 0;
+        transition: all 1s ease;
+
+        &--top {    
+            transform: translateY(rem(10));
+        
+            &.showing {
+                transform: translateY(0);
+            }
+        }
+
+        &--rotate {
+            transform: rotateZ(5deg);
+        
+            &.showing {
+                transform: rotateZ(0);
+            }
+        }   
+
+        &--right {
+            transform: translateX(rem(100));
+        
+            &.showing {
+                transform: translateX(0);
+            }
+        }
+
+        &.showing {
+            opacity: 1;
         }
     }
 }

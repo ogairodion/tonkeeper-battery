@@ -1,8 +1,14 @@
 .testing {
+    position: relative;
     padding: rem(100) 0;
 
     &__title {
         margin-bottom: rem(100);
+    }
+
+    .blur-item {
+        top: rem(31);
+        left: rem(-464);
     }
 
     &__wrapper {
