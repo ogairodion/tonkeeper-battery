@@ -1,27 +1,52 @@
 .bottom {
-    padding: rem(100) 0;
+    padding: rem(50) 0 0;
+
+    @media (min-width: 1200px) {
+        padding: rem(100) 0;
+    }
 
     &__text {
         display: flex;
         flex-direction: column;
         max-width: rem(1590);
-        font-size: rem(64);
-        line-height: rem(78);
+        font-size: rem(28);
+        line-height: rem(36);
         font-weight: 900;
         color: var(--color-blue);
         margin-bottom: rem(44);
 
+        @media (min-width: 768px) {
+            font-size: rem(36);
+            line-height: rem(42);
+        }
+
+        @media (min-width: 1200px) {
+            font-size: rem(64);
+            line-height: rem(78);
+            margin-bottom: rem(44);
+        }
+
         &:after {
             content: '';
             width: 100%;
-            max-width: rem(803);
-            height: rem(4);
+            max-width: rem(200);
+            height: rem(2);
             background: var(--color-white);
-            margin-top: rem(30);
+            margin-top: rem(20);
+
+            @media (min-width: 1200px) {
+                max-width: rem(803);
+                height: rem(4);
+                margin-top: rem(30);
+            }
         }
     }
 
     &__icon {
-        font-size: rem(100);
+        font-size: rem(56);
+
+        @media (min-width: 1200px) {
+            font-size: rem(100);
+        }
     }
 }

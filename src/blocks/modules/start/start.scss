@@ -1,9 +1,21 @@
 .start {
     position: relative;
-    padding: rem(100) 0;
+    padding: rem(50) 0;
+
+    @media (min-width: 768px) {
+        padding: rem(100) 0;
+    }
 
     &__title {
-        margin-bottom: rem(120);
+        margin-bottom: rem(40);
+
+        @media (min-width: 768px) {
+            margin-bottom: rem(60);
+        }
+
+        @media (min-width: 1200px) {
+            margin-bottom: rem(120);
+        }
     }
 
     .blur-item {
@@ -13,35 +25,79 @@
 
     &__slide {
         position: relative;
+        display: flex;
+        flex-direction: column;
         width: 100% !important;
-        min-height: rem(551);
-        border-radius: rem(30);
+        min-height: rem(200);
+        border-radius: rem(16);
         overflow: hidden;
         background: linear-gradient(127deg, rgba(0,0,0,0.4990371148459384) 50%, rgba(0,148,255,1) 125%);
-        padding: rem(44);
+        padding: rem(12);
+
+        @media (min-width: 768px) {
+            min-height: rem(250);
+            padding: rem(24);
+        }
+
+        @media (min-width: 1200px) {
+            min-height: rem(551);
+            padding: rem(44);
+            border-radius: rem(30);
+        }
 
         &-title {
             max-width: rem(714);
-            font-size: rem(46);
+            font-size: rem(18);
             font-weight: 600;
-            line-height: rem(56);
-            margin-bottom: rem(95);
+            line-height: rem(22);
+
+            @media (min-width: 768px) {
+                font-size: rem(26);
+                line-height: rem(32);
+                margin-bottom: rem(40);
+            }
+    
+            @media (min-width: 1200px) {
+                font-size: rem(46);
+                line-height: rem(56);
+                margin-bottom: rem(95);
+            }
         }
 
         &-icon {
-            font-size: rem(146);
+            font-size: rem(50);
+            margin-top: auto;
+
+            @media (min-width: 768px) {
+                font-size: rem(60);
+                margin-top: 0;
+            }
+    
+            @media (min-width: 1200px) {
+                font-size: rem(146);
+            }
         }
 
         &-number {
             position: absolute;
             z-index: 2;
             right: 0;
-            bottom: rem(-56);
-            font-size: rem(350);
-            line-height: rem(300);
+            bottom: rem(-20);
+            font-size: rem(50);
+            line-height: rem(80);
             font-weight: 900;
             color: var(--color-blue-2);
             opacity: 0.2;
+
+            @media (min-width: 768px) {
+                font-size: rem(150);
+                line-height: rem(180);
+            }
+    
+            @media (min-width: 1200px) {
+                font-size: rem(350);
+                line-height: rem(300);
+            }
         }
 
         &-img {
@@ -49,6 +105,10 @@
             top: 0;
             right: rem(-10);
             z-index: 1;
+
+            @media (max-width: 1199px) {
+                display: none;
+            }
         }
     }
 
@@ -61,6 +121,10 @@
     }
 
     .swiper-pagination {
-        margin-top: rem(45);
+        margin-top: rem(20);
+
+        @media (min-width: 1200px) {
+            margin-top: rem(45);
+        }
     }
 }

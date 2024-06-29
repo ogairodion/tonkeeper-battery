@@ -1,9 +1,21 @@
 .testing {
     position: relative;
-    padding: rem(100) 0;
+    padding: rem(50) 0;
+
+    @media (min-width: 1200px) {
+        padding: rem(100) 0;
+    }
 
     &__title {
-        margin-bottom: rem(100);
+        margin-bottom: rem(40);
+
+        @media (min-width: 768px) {
+            margin-bottom: rem(60);
+        }
+
+        @media (min-width: 1200px) {
+            margin-bottom: rem(100);
+        }
     }
 
     .blur-item {
@@ -19,18 +31,34 @@
         &:after {
             content: '';
             width: 100%;
-            max-width: rem(803);
-            height: rem(4);
+            max-width: rem(200);
+            height: rem(2);
             background: var(--color-blue);
-            margin-top: rem(30);
+            margin-top: rem(20);
+
+            @media (min-width: 1200px) {
+                max-width: rem(803);
+                height: rem(4);
+                margin-top: rem(30);
+            }
         }
     }
 
     &__text {
         max-width: rem(1150);
-        font-size: rem(46);
-        line-height: rem(56);
+        font-size: rem(22);
+        line-height: rem(26);
         font-weight: 900;
+
+        @media (min-width: 768px) {
+            font-size: rem(28);
+            line-height: rem(36);
+        }
+
+        @media (min-width: 1200px) {
+            font-size: rem(46);
+            line-height: rem(56);
+        }
 
         a {
             max-width: fit-content;
@@ -42,13 +70,21 @@
     &__icons {
         display: flex;
         align-items: center;
-        gap: rem(22);
+        gap: rem(16);
+
+        @media (min-width: 1200px) {
+            gap: rem(22);
+        }
     }
 
     &__icon {
         svg {
-            max-width: rem(100);
+            max-width: rem(50);
             height: auto;
+
+            @media (min-width: 1200px) {
+                max-width: rem(100);
+            }
         }
     }
 }

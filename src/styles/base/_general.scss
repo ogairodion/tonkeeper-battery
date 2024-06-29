@@ -42,16 +42,28 @@ body {
     &-content {
         position: relative;
         display: grid;
-        grid-template-columns: 1fr rem(150);
-        gap: rem(40);
+        grid-template-columns: calc(100% - 40px) rem(40);
+        gap: rem(20);
         align-items: end;
         width: 100%;
+        
+        @media (min-width: 768px) {
+            grid-template-columns: calc(100% - 80px) rem(80);
+        }
+
+        @media (min-width: 1200px) {
+            grid-template-columns: 1fr rem(150);
+            gap: rem(40);
+        }
 
         &-right {
             position: sticky;
             position: -webkit-sticky;
             right: 0;
             bottom: rem(20);
+            display: flex;
+            justify-content: flex-end;
+            padding-right: rem(20);
         }
     }
 }
@@ -61,14 +73,24 @@ body {
 
     &-bullet {
         opacity: 1 !important;
-        width: rem(20);
-        height: rem(20);
+        width: rem(8);
+        height: rem(8);
         background: var(--color-gray);
+
+        @media (min-width: 1200px) {
+            width: rem(20);
+            height: rem(20);
+        }
 
         &-active {
             background: var(--color-blue);
         }
     }
+}
+
+.battery {
+    width: 100%;
+    height: auto;
 }
 
 .blur-item {
@@ -191,21 +213,20 @@ img {
         width: 100%;
         margin: 0 auto;
         box-sizing: border-box;
-        padding: 0 44px; 
+        padding: 0 12px; 
+
+        @media (min-width: 1200px) {
+            padding: 0 24px; 
+        }
+
+        @media (min-width: 1600px) {
+            padding: 0 44px; 
+        }
     }
 }
 
 input, textarea {
     border: none;
-}
-
-.fancybox-content {
-    background: none;
-    z-index: 99994;
-}
-
-.compensate-for-scrollbar {
-    margin-right: auto !important;
 }
 
 .overflow-y-hidden {

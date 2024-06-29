@@ -1,3 +1,4 @@
+import "%modules%/loader/loader";
 import "%modules%/header/header";
 import "%modules%/main-top/main-top";
 import "%modules%/start/start";

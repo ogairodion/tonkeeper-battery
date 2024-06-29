@@ -1,15 +1,45 @@
 .title {
     &--h1 {
-        font-size: rem(150);
+        font-size: rem(45);
         font-weight: 900;
-        line-height: rem(185);
+        line-height: rem(45);
         color: var(--color-blue);
+
+        @media (min-width: 768px) {
+            font-size: rem(65);
+            line-height: rem(65);
+        }
+
+        @media (min-width: 1200px) {
+            font-size: rem(98);
+            line-height: rem(120);
+        }
+
+        @media (min-width: 1600px) {
+            font-size: rem(150);
+            line-height: rem(185);
+        }
     }
 
     &--h2 {
-        font-size: rem(64);
-        line-height: rem(78);
+        font-size: rem(22);
+        line-height: rem(28);
         font-weight: 900;
         color: var(--color-blue);
+
+        @media (min-width: 768px) {
+            font-size: rem(35);
+            line-height: rem(38);
+        }
+
+        @media (min-width: 1200px) {
+            font-size: rem(44);
+            line-height: rem(54);
+        }
+
+        @media (min-width: 1600px) {
+            font-size: rem(64);
+            line-height: rem(78);
+        }
     }
 }

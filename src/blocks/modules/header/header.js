@@ -1,20 +1,34 @@
+import $ from 'jquery';
+global.$ = global.jQuery = $;
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
 let scrollTop = window.scrollY;
+let windowWidth = 0;
 
 const header = document.querySelector('.header');
 const mainContent = document.querySelector('.main-content-left');
 const sections = mainContent.querySelectorAll('section');
 const charge = document.querySelector('.charge');
 const fulls = document.querySelectorAll('.full');
-
 const menuBtn = document.querySelectorAll('.header__menu-item');
-
 const sectionsArray = gsap.utils.toArray(sections);
 const animations = gsap.utils.toArray('.js-animation-show');
+const menu = document.querySelector('.header__menu');
+const wrapper = document.querySelector('.header__wrapper');
+const mobile = document.querySelector('.header__mobile');
+const burger = document.querySelector('.header__burger');
+const menuItems = document.querySelectorAll('.header__menu-item');
+
+windowWidth = window.innerWidth;
+adaptiveHeader(windowWidth);
+
+window.addEventListener('resize', () => {
+    windowWidth = window.innerWidth;
+    adaptiveHeader(windowWidth);
+});
 
 window.addEventListener('scroll', () => {
     scrollTop = window.scrollY;
@@ -29,8 +43,8 @@ window.addEventListener('scroll', () => {
 sectionsArray.forEach((section, index) => {
     gsap.from(section, {
         scrollTrigger: {
-            trigger: section,       
-            start: 'top 80%',   
+            trigger: section,    
+            start: 'top 100%',   
             end: 'bottom bottom',
             onEnter: () => {
                 if (index > 0) {
@@ -57,7 +71,7 @@ sectionsArray.forEach((section, index) => {
     gsap.to(section, {
         scrollTrigger: {
             trigger: section,
-            start: 'top 80%',  
+            start: 'top 100%',  
             end: 'bottom bottom',    
             onEnter: () => {
                 if (index > 0) {
@@ -123,5 +137,35 @@ animations.forEach((item) => {
                 item.classList.add('showing');
             },
         },
+    });
+});
+
+function adaptiveHeader(width) {
+    switch (true) {
+        case width < 1200 && !mobile.contains(menu):
+                mobile.prepend(menu);
+            break;
+        case width >= 1200 && mobile.contains(menu):
+                wrapper.prepend(menu);
+            break;
+    }
+}
+
+burger.addEventListener('click', () => {
+    header.classList.toggle('open');
+});
+
+menuItems.forEach((menuItem) => {
+    menuItem.addEventListener('click', (e) => {
+        e.preventDefault();
+
+        header.classList.remove('open');
+
+        $('html, body').animate({
+            scrollTop: scrollTo = $(e.target.attributes.href.value).offset().top - header.offsetHeight + 'px',
+        }, {
+            duration: 800
+        });
+        return false;
     });
 });
